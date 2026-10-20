@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://selleryd.github.io/brew-babes/sitemap.xml

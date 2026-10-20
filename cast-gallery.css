@@ -1,0 +1,27 @@
+/* Exact-variant galleries keep supplier-only configurations visibly distinct. */
+.cast-supplier-image { background: #f4f2f0; }
+.cast-supplier-image .profile-main-photo { object-fit: contain; padding: 8%; }
+.cast-supplier-image .profile-photo-caption { pointer-events: none; }
+.cast-gallery-note { min-height: 3.2em; }
+.profile-photo-thumbs { overflow-x: auto; scrollbar-width: thin; }
+.profile-photo-thumbs button { flex-shrink: 0; }
+.profile-photo-thumbs button:focus-visible,
+.profile-lifestyle-grid button:focus-visible { outline: 3px solid #ff9fb8; outline-offset: 3px; }
+.cast-campaign-label { max-width: calc(100% - 70px); }
+
+/* Keep product-only photographs unobstructed when no model gallery is assigned. */
+.cast-supplier-image::after,
+.cast-supplier-image .profile-photo-caption,
+.cast-supplier-card .campaign-product-inset,
+.cast-supplier-card .swipe-product-inset,
+.cast-supplier-card .campaign-photo-wrap::after,
+.swipe-card.cast-supplier-card::after { display: none; }
+.swipe-card.cast-supplier-card { display: flex; flex-direction: column; }
+.swipe-card.cast-supplier-card .swipe-photo { flex: 1; min-height: 0; height: 0; object-position: center; }
+.swipe-card.cast-supplier-card .swipe-card-copy { position: static; flex-shrink: 0; padding: 18px 20px; background: #171a23; }
+
+/* Preserve the complete portrait and wide compositions during product inspection. */
+.profile-photo-frame { aspect-ratio: 2 / 3; background: #111218; }
+.profile-main-photo { object-fit: contain; object-position: center; }
+.profile-lifestyle-grid { align-items: start; }
+.profile-lifestyle-grid img { height: auto; aspect-ratio: auto; object-fit: contain; object-position: center; }
